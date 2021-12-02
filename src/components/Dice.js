@@ -5,8 +5,8 @@ export default function Dice(props) {
     // const [face, setFace] = useState(1);
     const ref = useRef(null);
     const dispatch = useDispatch();
-    const { face } = useSelector(state => state.diceReducer[props.dice])
-    const { status } = useSelector(state => state.diceReducer)
+    const { face, status } = useSelector(state => state.diceReducer[props.dice])
+    // const { status } = useSelector(state => state.diceReducer)
     useEffect(() => {
         var startTime = performance.now();
         let intervalCode = null;
@@ -21,7 +21,7 @@ export default function Dice(props) {
                     clearInterval(intervalCode);
                     dispatch({
                         type: 'STOP',
-                        data: 'stop'
+                        data: props.dice
                     })
                 } else {
                     dispatch({

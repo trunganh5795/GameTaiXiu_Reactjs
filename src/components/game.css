@@ -14,3 +14,19 @@
 .textGame{
     font-size: 60px
 }
+
+.animationChoose{
+    animation-name: zoomOut;
+    animation-duration: 0.5s;
+}
+@keyframes zoomOut {
+    0%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

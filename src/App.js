@@ -4,6 +4,7 @@ import Dice from './components/Dice';
 import { useEffect } from 'react';
 import Game from './components/Game';
 import bg from './assets/img/bgGame.png'
+import Popup from './components/Popup';
 const style = {
   backgroundImage: bg
 }
@@ -16,12 +17,12 @@ function App() {
           <Dice dice={"dice2"} actionType={"DICE_2"} />
           <Dice dice={"dice3"} actionType={"DICE_3"} />
         </div>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           <Game />
         </div>
 
       </div>
-
+      <Popup />
     </div>
   );
 }
