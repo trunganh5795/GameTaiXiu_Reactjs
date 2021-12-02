@@ -1,0 +1,16 @@
+.card{
+    padding:20px;
+    background-color:transparent;
+    border: 0;
+    font-size:40px;
+    height:200px
+}
+.card .btn{
+    font-size:60px;
+}
+.card .btn-warning{
+    color:rgb(216, 35, 105);
+}
+.textGame{
+    font-size: 60px
+}

@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Dice from './components/Dice';
+import { useEffect } from 'react';
+import Game from './components/Game';
+import bg from './assets/img/bgGame.png'
+const style = {
+  backgroundImage: bg
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="container" style={style}>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '35px 0px' }}>
+          <Dice dice={"dice1"} actionType={"DICE_1"} />
+          <Dice dice={"dice2"} actionType={"DICE_2"} />
+          <Dice dice={"dice3"} actionType={"DICE_3"} />
+        </div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <Game />
+        </div>
+
+      </div>
+
     </div>
   );
 }
